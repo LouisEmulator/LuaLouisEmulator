@@ -79,7 +79,7 @@ function DataBase.GetValue(Table, Column, Where, Name)
 	if ret == 0
 	then
 		LogPrint(string.format("Não foi possível executar a query: %s", Query))
-		LuaSQLClose()
+		SQLClose()
 		return 0
 	end
 	
@@ -88,12 +88,12 @@ function DataBase.GetValue(Table, Column, Where, Name)
 	if nRet == SQL_NO_DATA
 	then
 		LogPrint(string.format("Não foi possível executar a query: %s", Query))
-		LuaSQLClose()
+		SQLClose()
 		return 0
 	end
 	
 	local val = SQLGetNumber(Column)
-	LuaSQLClose()
+	SQLClose()
 	return val
 end
 
@@ -105,11 +105,11 @@ function DataBase.SetValue(Table, Column, Value, Where, Name)
 	if ret == 0
 	then
 		LogPrint(string.format("N o foi poss vel executar a query: %s", Query))
-		LuaSQLClose()
+		SQLClose()
 		return
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.SetAddValue(Table, Column, Value, Where, Name)
@@ -120,11 +120,11 @@ function DataBase.SetAddValue(Table, Column, Value, Where, Name)
 	if ret == 0
 	then
 		LogPrint(string.format("N o foi poss vel executar a query: %s", Query))
-		LuaSQLClose()
+		SQLClose()
 		return
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.SetDecreaseValue(Table, Column, Value, Where, Name)
@@ -135,11 +135,11 @@ function DataBase.SetDecreaseValue(Table, Column, Value, Where, Name)
 	if ret == 0
 	then
 		LogPrint(string.format("N o foi poss vel executar a query: %s", Query))
-		LuaSQLClose()
+		SQLClose()
 		return
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.GetString(Table, Column, Where, Name)
@@ -149,7 +149,7 @@ function DataBase.GetString(Table, Column, Where, Name)
 	if ret == 0
 	then
 		LogPrint(string.format("N o foi poss vel executar a query: %s", Query))
-		LuaSQLClose()
+		SQLClose()
 		return 'We could not find'
 	end
 	
@@ -157,12 +157,12 @@ function DataBase.GetString(Table, Column, Where, Name)
 	if nRet == SQL_NO_DATA
 	then
 		LogPrint(string.format("N o foi poss vel executar a query: %s", Query))
-		LuaSQLClose()
+		SQLClose()
 		return 'We could not find'
 	end
 	
-	local str = LuaSQLGetString(Column)
-	LuaSQLClose()
+	local str = SQLGetString(Column)
+	SQLClose()
 	return str
 end
 
@@ -173,11 +173,11 @@ function DataBase.SetString(Table, Column, String, Where, Name)
 	if ret == 0
 	then
 		LogPrint(string.format("N o foi poss vel executar a query: %s", Query))
-		LuaSQLClose()
+		SQLClose()
 		return
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 
@@ -186,7 +186,7 @@ function DataBase.Query(Query)
 	if ret == 0 then
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	end
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.QueryGetString(Query, Column)
@@ -197,13 +197,13 @@ function DataBase.QueryGetString(Query, Column)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	else
 		if SQLFetch() ~= 100 then
-			str = LuaSQLGetString(Column)
-			LuaSQLClose()
+			str = SQLGetString(Column)
+			SQLClose()
 			return str
 		end
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 	return str
 end
 
@@ -216,12 +216,12 @@ function DataBase.QueryGetNumber(Query, Column)
 	else
 		if SQLFetch() ~= 100 then
 			int = SQLGetNumber(Column)
-			LuaSQLClose()
+			SQLClose()
 			return int
 		end
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 	return int
 end
 
@@ -235,12 +235,12 @@ function DataBase.GetNumberByString(Table, Column, Where, Name)
 	else
 		if SQLFetch() ~= 100 then
 			int = SQLGetNumber(Column)
-			LuaSQLClose()
+			SQLClose()
 			return int
 		end
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 	return int
 end
 
@@ -254,12 +254,12 @@ function DataBase.GetNumberByNumber(Table, Column, Where, Name)
 	else
 		if SQLFetch() ~= 100 then
 			int = SQLGetNumber(Column)
-			LuaSQLClose()
+			SQLClose()
 			return int
 		end
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 	return int
 end
 
@@ -271,7 +271,7 @@ function DataBase.SetNumberByString(Table, Column, Value, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.SetNumberByNumber(Table, Column, Value, Where, Name)
@@ -282,7 +282,7 @@ function DataBase.SetNumberByNumber(Table, Column, Value, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.GetStringByString(Table, Column, Where, Name)
@@ -294,13 +294,13 @@ function DataBase.GetStringByString(Table, Column, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	else
 		if SQLFetch() ~= 100 then
-			int = LuaSQLGetString(Column)
-			LuaSQLClose()
+			int = SQLGetString(Column)
+			SQLClose()
 			return int
 		end
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 	return int
 end
 
@@ -313,13 +313,13 @@ function DataBase.GetStringByNumber(Table, Column, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	else
 		if SQLFetch() ~= 100 then
-			int = LuaSQLGetString(Column)
-			LuaSQLClose()
+			int = SQLGetString(Column)
+			SQLClose()
 			return int
 		end
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 	return int
 end
 
@@ -331,7 +331,7 @@ function DataBase.SetStringByString(Table, Column, Value, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.SetStringByNumber(Table, Column, Value, Where, Name)
@@ -342,7 +342,7 @@ function DataBase.SetStringByNumber(Table, Column, Value, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.AddNumberByString(Table, Column, Value, Where, Name)
@@ -353,7 +353,7 @@ function DataBase.AddNumberByString(Table, Column, Value, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.AddNumberByNumber(Table, Column, Value, Where, Name)
@@ -364,7 +364,7 @@ function DataBase.AddNumberByNumber(Table, Column, Value, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.DecreaseNumberByString(Table, Column, Value, Where, Name)
@@ -375,7 +375,7 @@ function DataBase.DecreaseNumberByString(Table, Column, Value, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 function DataBase.DecreaseNumberByNumber(Table, Column, Value, Where, Name)
@@ -386,14 +386,14 @@ function DataBase.DecreaseNumberByNumber(Table, Column, Value, Where, Name)
 		LogPrint( string.format("Não foi possível executar: %s", Query))
 	end
 	
-	LuaSQLClose()
+	SQLClose()
 end
 
 
 
 function DataBase.CreateColumn(table, column, definition)
 	SQLQuery(string.format("IF NOT EXISTS( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '%s' AND COLUMN_NAME = '%s') ALTER TABLE %s ADD %s %s", table, column, table, column, definition))
-	LuaSQLClose()
+	SQLClose()
 end
 
 local DataBase_Handles = {}

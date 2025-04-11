@@ -173,6 +173,8 @@ UserInfoSend(aIndex)
 UserActionSend(aIndex,bIndex,aValue)
 UserSetAccountLevel(aIndex,aValue,bValue)
 DumpStack()
+SetExpRate(aIndex,aValue)
+GetExpRate(aIndex) return integer
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
