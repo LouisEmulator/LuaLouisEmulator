@@ -4,14 +4,14 @@ GetMinUserIndex()		return OBJECT_START_USER
 GetMaxUserIndex()		return (OBJECT_START_USER+MAX_OBJECT_USER)
 GetMinMonsterIndex()	return OBJECT_START_MONSTER
 GetMaxMonsterIndex()	return (OBJECT_START_MONSTER+MAX_OBJECT_MONSTER)
-etGameServerCode()		return gServerInfo.m_ServerCode
+GetGameServerCode()		return gServerInfo.m_ServerCode
 GetGameServerVersion()	return GAMESERVER_UPDATE
 GetGameServerProtocol()	return GAMESERVER_LANGUAGE
 GetGameServerCurUser()	return gObjTotalUser
 GetGameServerMaxUser()	return Server Max User
 GET_ITEM(aValue,bValue)  return GET_ITEM(aValue,bValue)
 GetLicenseCustomerName() return CustomerName
-GetObjectConnected(aIndex) return 0 or 1
+GetObjectConnected(aIndex) return 
 GetObjectIpAddress(aIndex) return user ip
 GetObjectType(aIndex) return object type
 GetObjectAccount(aIndex) return object accountname
