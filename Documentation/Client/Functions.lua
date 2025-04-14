@@ -99,6 +99,12 @@ GetCoin1() return int
 GetCoin2() return int
 GetCoin3() return int
 
+-- ### ITEM BMD FUNCTIONS ###
+GetNameByIndex(ItemIndex) return String
+GetCompleteNameByIndex(ItemIndex,ItemLevel,ItemExcOpt) return String
+GetWidthByIndex(ItemIndex) return int
+GetHeightByIndex(ItemIndex) return int
+GetSlotByIndex(ItemIndex) return int
 
 -- ### USER FUNCTIONS ###
 UserGetMap() return integer
@@ -176,15 +182,15 @@ MousePosY() return integer
 glColor3f(float r, float g, float b)
 glColor4f(float r, float g, float b, float a)
 DisableAlphaBlend()
-pSetBlend(int aValue) --EnableAlphaTest
+SetBlend(int aValue) --EnableAlphaTest
 DrawBar(float x, float y, float w, float h)
 EndDrawBar()
 SetFontType(int font)
-SetFontBg(int r, int g, int b, int a)
+SetTextBg(int r, int g, int b, int a)
 SetTextColor(int r, int g, int b, int a)
 RenderText(int x, int y, char* text, int width, int sort)
 RenderImage(int imageIndex, float x, float y, float w, float h)
-RenderBitmap(int Texture, float x, float y, float w, float h, float u, float v, float uWidth, float vHeight, int Scale, int StartScale, float Alpha)
+RenderImage2(int Texture, float x, float y, float w, float h, float u, float v, float uWidth, float vHeight, int Scale, int StartScale, float Alpha)
 RenderImageScale(int Texture, float x, float y, float w, float h, float u, float v, float uWidth, float vHeight, float Alpha)
 CheckIsRepeatKey(int Key) return integer 
 CheckPressedKey(int Key) return integer 
@@ -201,9 +207,9 @@ GetWindowHeight() return integer
 GetImageWidth(int texture) return float 
 GetImageHeight(int texture) return float 
 ItemByteConvert(BYTE* lpMsg, int ItemIndex, int Level, int dur, int Op1, int Op2, int Op3, int Exc, int Ancient, int JoH, int Socket, BYTE Sock1, BYTE Sock2, BYTE Sock3, BYTE Sock4, BYTE Sock5)
-RenderTooltipComplete(int x, int y, int ItemIndex, int Level, int dur, int Op1, int Op2, int Op3, int Exc, int Ancient, int JoH, int Socket, int Sock1, int Sock2, int Sock3, int Sock4, int Sock5)
+ShowDescriptionComplete(int x, int y, int ItemIndex, int Level, int dur, int Op1, int Op2, int Op3, int Exc, int Ancient, int JoH, int Socket, int Sock1, int Sock2, int Sock3, int Sock4, int Sock5)
 RenderTooltip(int aValue,int bValue,int cValue,int dValue,int eValue,int fValue,int gValue,int hValue,int iValue,int jValue)
-RenderItem(float sx, float sy, float w, float h, int Type, int Level, int Option1, int ExtOption,int Rotate)
+CreateItem(float sx, float sy, float w, float h, int Type, int Level, int Option1, int ExtOption,int Rotate)
 SendMessageClient(char* text)
 LockPlayerWalk()
 UnlockPlayerWalk()
@@ -218,6 +224,8 @@ GLSwitch()
 GetWideX() return integer 
 GetWindowWidthAdd() return integer 
 RenderText2(int aValue,int bValue,std::string cValue,int dValue,int eValue)
+
+
 
 
 -- ### PACKET FUNCTIONS ###

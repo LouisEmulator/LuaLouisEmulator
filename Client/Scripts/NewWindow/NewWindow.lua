@@ -134,7 +134,8 @@ function NewWindowInterface()
 
 		SetFontType(1)
 		SetTextColor(255, 255, 255, 255)
-		RenderText5(PosXWindow, 12, string.format(CONFIG.MESSAGES[1][GetLanguage()]), 190, 3)
+		SetTextBg(0, 0, 0, 0)
+		RenderText(PosXWindow, 12, string.format(CONFIG.MESSAGES[1][GetLanguage()]), 190, 3)
 		
 		-- BUTTON CLOSE --
 		NewWindow.CreateButton(CONFIG.ButtonID.fechar, PosXWindow + 190 - 20, 6, 14, 14) 	
@@ -165,7 +166,15 @@ function NewWindowInterface()
 
 		SetFontType(1)
 		SetTextColor(255, 255, 255, 255)
+		SetTextBg(0, 0, 0, 0)
 		RenderText5(PosXWindow, 172, string.format(CONFIG.MESSAGES[1][GetLanguage()]), 190, 3)
+
+		SetFontType(1)
+		SetTextColor(255, 255, 255, 255)
+		SetTextBg(0, 0, 0, 0)
+		RenderText5(PosXWindow, 190, GetNameByIndex(5), 190, 3)
+
+		ShowDescriptionComplete(PosXWindow-100,220,7172,15,0,1,1,7,63,0,0,0,255,255,255,255,255)
 
 end
 
