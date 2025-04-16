@@ -158,23 +158,29 @@ function TemplateScript_OnUserItemDrop(aIndex, slot, x, y)
 	return 1
 end
 
-function TemplateScript_OnUserItemMove(aIndex, aFlag, aSlot, bFlag, bSlot)
+function TemplateScript_OnUserItemMove(aIndex, aFlag, aSlot, bFlag, bSlot, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption)
 	-- ### Argument information: ###
-	-- aIndex = User index.
-	-- aFlag = Item source flag.
-	-- aSlot= Item source slot.
-	-- bFlag = Item target flag.
-	-- bSlot= Item target slot.
+	-- aIndex		= User index.
+	-- aFlag		= Item source flag.
+	-- aSlot		= Item source slot.
+	-- bFlag		= Item target flag.
+	-- bSlot		= Item target slot.
+	-- ItemLevel	= Item level.
+	-- ItemOption1	= Item skill.
+	-- ItemOption2	= Item lucky.
+	-- ItemOption3	= Item life option.
+	-- ItemNewOption= Item Excellent.
 
 	-- Flag list:
-	-- 0 = Inventory.
-	-- 1 = Trade.
-	-- 2 = Warehouse.
-	-- 3 = Chaos Box.
-	-- 4 = Personal Shop.
+	-- 0	= Inventory.
+	-- 1	= Trade.
+	-- 2	= Warehouse.
+	-- 3	= Chaos Box.
+	-- 4	= Personal Shop.
 	-- 5~20 = Chaos Box.
-	-- 21 = Event Inventory. (S8 >)
-	-- 22 = Muun Inventory. (S8 >)
+	-- 21	= Event Inventory. (S8 >)
+	-- 22	= Muun Inventory. (S8 >)
+	-- 50	= Marlet place
 
 	-- ### Bridge information: ###
 	-- Called on item move, must return (1) if the item can be moved, (0) if not.
