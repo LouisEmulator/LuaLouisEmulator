@@ -146,25 +146,32 @@ function TemplateScript_OnUserItemPick(aIndex, slot)
 	return 1
 end
 
-function TemplateScript_OnUserItemDrop(aIndex, slot, x, y)
+function TemplateScript_OnUserItemDrop(aIndex, slot, x, y, ItemIndex, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption)
 	-- ### Argument information: ###
 	-- aIndex = User index.
 	-- index = Item slot.
 	-- x = Item drop position x.
 	-- y = Item drop position y.
+	-- ItemIndex	= Item index.
+	-- ItemLevel	= Item level.
+	-- ItemOption1	= Item skill.
+	-- ItemOption2	= Item lucky.
+	-- ItemOption3	= Item life option.
+	-- ItemNewOption= Item Excellent.
 
 	-- ### Bridge information: ###
 	-- Called on item drop, must return (1) if the item can be dropped, (0) if not.
 	return 1
 end
 
-function TemplateScript_OnUserItemMove(aIndex, aFlag, aSlot, bFlag, bSlot, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption)
+function TemplateScript_OnUserItemMove(aIndex, aFlag, aSlot, bFlag, bSlot, ItemIndex, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption)
 	-- ### Argument information: ###
 	-- aIndex		= User index.
 	-- aFlag		= Item source flag.
 	-- aSlot		= Item source slot.
 	-- bFlag		= Item target flag.
 	-- bSlot		= Item target slot.
+	-- ItemIndex	= Item index.
 	-- ItemLevel	= Item level.
 	-- ItemOption1	= Item skill.
 	-- ItemOption2	= Item lucky.
