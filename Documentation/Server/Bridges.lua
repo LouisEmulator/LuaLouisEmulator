@@ -136,7 +136,7 @@ function TemplateScript_OnCheckUserKiller(aIndex, bIndex)
 	return 1
 end
 
-function TemplateScript_OnUserItemPick(aIndex, slot)
+function TemplateScript_OnUserItemPick(aIndex, slot, map, x, y, ItemIndex, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption)
 	-- ### Argument information: ###
 	-- aIndex = User index.
 	-- index = Item slot.
@@ -146,7 +146,7 @@ function TemplateScript_OnUserItemPick(aIndex, slot)
 	return 1
 end
 
-function TemplateScript_OnUserItemDrop(aIndex, slot, x, y, ItemIndex, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption)
+function TemplateScript_OnUserItemDrop(aIndex, slot, map, x, y, ItemIndex, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption)
 	-- ### Argument information: ###
 	-- aIndex = User index.
 	-- index = Item slot.

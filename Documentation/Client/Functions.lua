@@ -122,6 +122,7 @@ UserGetPants() return integer
 UserGetGloves() return integer
 UserGetBoots() return integer
 UserGetLevel() return integer
+UserGetMasterLevel() return integer
 UserGetClass() return integer
 UserGetGuild() return integer
 GuildGetName() return string
@@ -202,8 +203,8 @@ ResetMouseL()
 ResetMouseR()
 DisableCLick()
 CheckClickClient() return integer 
-GetWindowWidth() return integer 
-GetWindowHeight() return integer 
+WindowGetWidth() return integer 
+WindowGetHeight() return integer 
 GetImageWidth(int texture) return float 
 GetImageHeight(int texture) return float 
 ItemByteConvert(BYTE* lpMsg, int ItemIndex, int Level, int dur, int Op1, int Op2, int Op3, int Exc, int Ancient, int JoH, int Socket, BYTE Sock1, BYTE Sock2, BYTE Sock3, BYTE Sock4, BYTE Sock5)

@@ -120,7 +120,7 @@ FireworksSend(aIndex,aValue,bValue)
 InventoryGetWearSize() return INVENTORY_WEAR_SIZE
 InventoryGetMainSize() return INVENTORY_MAIN_SIZE
 InventoryGetFullSize() return INVENTORY_FULL_SIZE
-InventoryGetItemTable()
+InventoryGetItemTable(aIndex,aValue)
 InventoryGetItemIndex(aIndex,aValue)
 InventoryGetItemCount(aIndex,aValue, bValue)
 InventoryDelItemIndex(aIndex,aValue)
@@ -132,6 +132,7 @@ ItemDrop(aIndex,aValue,bValue,cValue,dValue)
 ItemDropEx(aIndex,aValue,bValue,cValue,dValue,eValue,fValue,gValue,hValue,iValue,jValue,kValue,lValue,mValue,nValue,oValue,pValue,qValue,rValue,sValue,tValue,uValue)
 ItemGive(aIndex,aValue)
 ItemGiveEx(aIndex,aValue,bValue,cValue,dValue,eValue,fValue,gValue,hValue,iValue,jValue,kValue,lValue,mValue,nValue,oValue,pValue,qValue)
+MapGetItemTable(aIndex,aValue)
 LevelUpSend(aIndex)
 LogPrint(string)
 LogColor(aValue,string) 
@@ -155,7 +156,7 @@ NoticeSendToAll(aValue,string)
 NoticeGlobalSend(aValue,string)
 PartyGetMemberCount(aValue)
 PartyGetMemberIndex(aValue,bValue)
-ObjectGetCoin()
+ObjectGetCoin(aIndex)
 ObjectAddCoin(aIndex,aValue,bValue,cValue)
 ObjectSubCoin(aIndex,aValue,bValue,cValue)
 PermissionCheck(aIndex,aValue)
@@ -175,6 +176,9 @@ UserSetAccountLevel(aIndex,aValue,bValue)
 DumpStack()
 SetExpRate(aIndex,aValue)
 GetExpRate(aIndex) return integer
+SetObjectSkillBlockTime(aIndex,skill,time) --time in seconds
+AddObjectExperience(aIndex,Experience,MaxLevelUp)
+LuaAddItemToGremoryCase(aIndex, GremoryType, GremoryNumber, ItemIndex, ItemLevel, ItemDurability, ItemOption1, ItemOption2, ItemOption3, NewOption, SetOption, JewelOfHarmonyOption, ItemOptionEx, SocketOption1, SocketOption2, SocketOption3, SocketOption4, SocketOption5, SocketBonus, Duration)
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
