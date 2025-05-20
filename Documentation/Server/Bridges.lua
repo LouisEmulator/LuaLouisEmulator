@@ -222,11 +222,11 @@ function TemplateScript_OnMonsterDamage(aIndex,bIndex,damage,skill,combo,flag)
 	return 0
 end
 
-function TemplateScript_OnSQLAsyncResult(label,param,result)
+function TemplateScript_OnSQLAsyncResult(queryName,identification,aIndex)
 	-- ### Argument information: ###
-	-- label = Query identification label.
-	-- param = String parameter.
-	-- result = Query result (0=Fail/1=Success).
+	-- queryName = Query identification label.
+	-- identification = Query server identification name to get data or delete query.
+	-- aIndex = User index.
 
 	-- ### Bridge information: ###
 	-- Called after async query execution.
