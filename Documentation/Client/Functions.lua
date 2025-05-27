@@ -210,7 +210,9 @@ GetImageHeight(int texture) return float
 ItemByteConvert(BYTE* lpMsg, int ItemIndex, int Level, int dur, int Op1, int Op2, int Op3, int Exc, int Ancient, int JoH, int Socket, BYTE Sock1, BYTE Sock2, BYTE Sock3, BYTE Sock4, BYTE Sock5)
 ShowDescriptionComplete(int x, int y, int ItemIndex, int Level, int dur, int Op1, int Op2, int Op3, int Exc, int Ancient, int JoH, int Socket, int Sock1, int Sock2, int Sock3, int Sock4, int Sock5)
 RenderTooltip(int aValue,int bValue,int cValue,int dValue,int eValue,int fValue,int gValue,int hValue,int iValue,int jValue)
-CreateItem(float sx, float sy, float w, float h, int Type, int Level, int Option1, int ExtOption,int Rotate)
+CreateItem(float sx, float sy, float w, float h, int Type, int Level, int Option1, int ExtOption,int Rotate) return SkinIndex
+LoadMonster(int SkinIndex)
+RenderMonster(int aIndex, float PosX, float PosY, float size)
 SendMessageClient(char* text)
 LockPlayerWalk()
 UnlockPlayerWalk()

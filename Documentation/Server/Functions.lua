@@ -177,7 +177,7 @@ DumpStack()
 SetExpRate(aIndex,ExperienceRate)
 GetExpRate(aIndex) return integer
 SetObjectSkillBlockTime(aIndex,skill,time) --time in seconds
-AddObjectExperience(aIndex,Experience,MaxLevelUp)
+ObjectAddExperience(aIndex,Experience,MaxLevelUp)
 AddItemToGremoryCase(aIndex, GremoryType, GremoryNumber, ItemIndex, ItemLevel, ItemDurability, ItemOption1, ItemOption2, ItemOption3, NewOption, SetOption, JewelOfHarmonyOption, ItemOptionEx, SocketOption1, SocketOption2, SocketOption3, SocketOption4, SocketOption5, SocketBonus, Duration)
 
 -- ### PACKET FUNCTIONS ###
