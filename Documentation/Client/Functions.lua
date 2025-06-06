@@ -98,6 +98,12 @@ GetAddExcellentDamageRate() return int
 GetCoin1() return int
 GetCoin2() return int
 GetCoin3() return int
+LuaSetByte(offset, value)
+LuaSetWord(offset, value)
+LuaSetDword(offset, value)
+LuaSetFloat(offset, value)
+LuaSetDouble(offset, value)
+
 
 -- ### ITEM BMD FUNCTIONS ###
 GetNameByIndex(ItemIndex) return String
@@ -227,9 +233,10 @@ GLSwitch()
 GetWideX() return integer 
 GetWindowWidthAdd() return integer 
 RenderText2(int aValue,int bValue,std::string cValue,int dValue,int eValue)
-
-
-
+GetUrlData(Url) return datatable from URL (exemple: https://jogandomu.com.br/teste.json)
+DisableShowName() ON/OFF
+Base64ImageToFile(FileName,ImgBase64String) return true/false
+LoadPngImage(ImageIndex,FileName) return true/false
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main

@@ -13,7 +13,7 @@ function WindowTitleMainProc()
 		local StringWindowTitle = CONFIG.ServerName
 
 		if(CONFIG.EnableName == 1) then 
-			StringWindowTitle = StringWindowTitle .. " || " .. UserGetName()
+			StringWindowTitle = StringWindowTitle .. " || " .. UserGetName() .. " || " .. tostring(UserGetLevel())
 		end
 
 		SetWindowTitle(StringWindowTitle)

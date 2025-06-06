@@ -23,6 +23,8 @@ function ProtocolFunctions.Init()
 	ProtocolFunctions.ClientProtocol(ProtocolFunctions.ProtocolRecv)
 end
 
+--local json = require "Util/json"
+
 function ProtocolFunctions.ProtocolRecv(Packet, PacketName)
 	Console(3,string.format("[ProtocolCore] Name: %s Head: %d",PacketName,Packet))
 

@@ -156,6 +156,8 @@ NoticeSendToAll(aValue,string)
 NoticeGlobalSend(aValue,string)
 PartyGetMemberCount(PartyNumber)
 PartyGetMemberIndex(PartyNumber,Slot) -- Slot 0 to 9
+PartyAddMember(PartyIndex,aIndex) return true false
+PartyDelMember(PartyIndex,aIndex) return true false
 ObjectGetCoin(aIndex)
 ObjectAddCoin(aIndex,Coin1,Coin2,Coin3)
 ObjectSubCoin(aIndex,Coin1,Coin2,Coin3)
@@ -179,6 +181,9 @@ GetExpRate(aIndex) return integer
 SetObjectSkillBlockTime(aIndex,skill,time) --time in seconds
 ObjectAddExperience(aIndex,Experience,MaxLevelUp)
 AddItemToGremoryCase(aIndex, GremoryType, GremoryNumber, ItemIndex, ItemLevel, ItemDurability, ItemOption1, ItemOption2, ItemOption3, NewOption, SetOption, JewelOfHarmonyOption, ItemOptionEx, SocketOption1, SocketOption2, SocketOption3, SocketOption4, SocketOption5, SocketBonus, Duration)
+GetMonsterTopHitDamageUser(aIndex) return object index
+MuHelperStart(aIndex)
+MuHelperStop(aIndex)
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main

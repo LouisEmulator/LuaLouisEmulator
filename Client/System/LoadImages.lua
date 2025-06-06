@@ -7,6 +7,5 @@ BridgeFunctionAttach('MainLoader','LoadImages')
 function LoadImages()
 
 	LoadBitmap("Custom\\ScriptImages\\bg500.tga", 40000)
-
 	Console(2,"[LoadImages] Load lua images sucefully")
 end

@@ -91,6 +91,8 @@ function NewWindow.ButtonMouseOver(ButtonID, x, y)
 	return false
 end
 
+local MonsterLoad = {} 
+
 function NewWindowInterface()
 	local posX = GetWideX()
 	local base = 260 + 120
@@ -122,7 +124,7 @@ function NewWindowInterface()
 		if	CheckWindowOpen(UIGensInfo)			== 1	then	NewWindow.Close()	end
 		if	CheckWindowOpen(UINPC_Julia)		== 1	then	NewWindow.Close()	end
 
-		local PosXWindow = GetWideX() -260
+		local PosXWindow = GetWideX() -275
 
 		RenderImage(31322, PosXWindow, 0, 190, 428)
 		RenderImage(31353, PosXWindow, 0, 190, 64)
@@ -134,8 +136,7 @@ function NewWindowInterface()
 
 		SetFontType(1)
 		SetTextColor(255, 255, 255, 255)
-		SetTextBg(0, 0, 0, 0)
-		RenderText(PosXWindow, 12, string.format(CONFIG.MESSAGES[1][GetLanguage()]), 190, 3)
+		RenderText5(PosXWindow, 12, string.format(CONFIG.MESSAGES[1][GetLanguage()]), 190, 3)
 		
 		-- BUTTON CLOSE --
 		NewWindow.CreateButton(CONFIG.ButtonID.fechar, PosXWindow + 190 - 20, 6, 14, 14) 	
@@ -166,15 +167,17 @@ function NewWindowInterface()
 
 		SetFontType(1)
 		SetTextColor(255, 255, 255, 255)
-		SetTextBg(0, 0, 0, 0)
+		SetTextBg(0,0,0,0)
 		RenderText5(PosXWindow, 172, string.format(CONFIG.MESSAGES[1][GetLanguage()]), 190, 3)
 
-		SetFontType(1)
-		SetTextColor(255, 255, 255, 255)
-		SetTextBg(0, 0, 0, 0)
-		RenderText5(PosXWindow, 190, GetNameByIndex(5), 190, 3)
+		RenderImage2(40001, PosXWindow + 45, 200, 100, 100,0, 0, 1.0, 1.0, 1, 1, 1.0)
 
-		ShowDescriptionComplete(PosXWindow-100,220,7172,15,0,1,1,7,63,0,0,0,255,255,255,255,255)
+		--SHOW MONSTER INDEX 580 
+		local MonsterIndex
+		if MonsterLoad[580] == nil then
+			MonsterIndex = LoadMonster(580)
+		end
+		RenderMonster(MonsterIndex,380,210,1.3)
 
 end
 
@@ -182,8 +185,27 @@ function NewWindowKeyListener(key)
 	if CheckWindowOpen(UIChatWindow) == 1 then return false end
 
 	if key == Keys.L then
-		NewWindow.Open()
-		Console(1,"Open new window")
+
+		--DOWNLOAD DATATABLE
+		local url = "https://jogandomu.com.br/teste.json"
+
+		local Datatable = GetUrlData(url)
+	
+		if Datatable then
+			Datatable = json.decode(Datatable)
+			Console(3,Datatable.code)
+
+			local FileName = "Data//teste.png"
+			--MAKE FILE 
+			if Base64ImageToFile(FileName,Datatable.image) then
+				--LOAD IMAGE
+				if LoadPngImage(40001,FileName) then
+					--OPEN WINDOW
+					NewWindow.Open()
+					Console(1,"Open new window")
+				end
+			end
+		end
 	end
 		
 	if not NewWindow.CheckOpen() then return false end
