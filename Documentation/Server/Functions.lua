@@ -129,7 +129,7 @@ InventoryGetFreeSlotCount(aIndex)
 InventoryCheckSpaceByItem(aIndex,ItemIndex)
 InventoryCheckSpaceBySize(aIndex,Width,Height)
 ItemDrop(aIndex,aIndex,map,x,y,SpecialValue)
-ItemDropEx(aIndex,ItemIndex,ItemLevel,ItemDurability,ItemOption1,ItemOption2,ItemOption3,ItemNewOption,ItemSetOption,ItemJewelOfHarmonyOption,ItemItemOptionEx,ItemSocketOption1,ItemSocketOption2,ItemSocketOption3,ItemSocketOption4,ItemSocketOption5,ItemSocketOptionBonus,ItemDuration)
+ItemDropEx(aIndex,Map,PosX,PosY,ItemIndex,ItemLevel,ItemDurability,ItemOption1,ItemOption2,ItemOption3,ItemNewOption,ItemSetOption,ItemJewelOfHarmonyOption,ItemItemOptionEx,ItemSocketOption1,ItemSocketOption2,ItemSocketOption3,ItemSocketOption4,ItemSocketOption5,ItemSocketOptionBonus,ItemDuration,OwneraIndex)
 ItemGive(aIndex,SpecialValue)
 ItemGiveEx(aIndex,ItemIndex,ItemLevel,ItemDurability,ItemOption1,ItemOption2,ItemOption3,ItemNewOption,ItemSetOption,ItemJewelOfHarmonyOption,ItemItemOptionEx,ItemSocketOption1,ItemSocketOption2,ItemSocketOption3,ItemSocketOption4,ItemSocketOption5,ItemSocketOptionBonus,ItemDuration)
 MapGetItemTable(aIndex,Slot) -- SLOT = 0 to 299
