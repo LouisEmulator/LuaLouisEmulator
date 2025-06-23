@@ -238,6 +238,33 @@ DisableShowName() ON/OFF
 Base64ImageToFile(FileName,ImgBase64String) return true/false
 LoadPngImage(ImageIndex,FileName) return true/false
 
+## UPDATE 41++ ##
+
+## WINDOW NUMBER ##
+	WindowBuyVip		= 1,
+	WindowEventTime		= 2,
+	WindowRanking		= 3,
+	WindowCommand		= 4,
+	WindowItemBank		= 5,
+	WindowFlag		= 6,
+	WindowSkin		= 7,
+	WindowLuckyWheel	= 8,
+	WindowLevelUp		= 9,
+	WindowSmithShop		= 10,
+	WindowAchievements	= 11,
+	WindowSearchParty	= 12,
+	WindowSearchStore	= 13,
+	WindowBattlePass	= 14,
+	WindowDailyReward	= 15,
+	WindowMarketPlace	= 16,
+	WindowViewDetails	= 17,
+ ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+
+CheckCustomWindow(WindowNumber)  return integer
+OpenCustomWindow(WindowNumber) 
+CloseCustomWindow(WindowNumber)
+CloseAllCustomWindow(WindowNumber)
+
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
 SetDwordPacket(packetName, position) -> set value dword
