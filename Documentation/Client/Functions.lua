@@ -263,7 +263,7 @@ LoadPngImage(ImageIndex,FileName) return true/false
 CheckCustomWindow(WindowNumber)  return integer
 OpenCustomWindow(WindowNumber) 
 CloseCustomWindow(WindowNumber)
-CloseAllCustomWindow(WindowNumber)
+CloseAllCustomWindow()
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
