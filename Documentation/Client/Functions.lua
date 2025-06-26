@@ -264,6 +264,7 @@ CheckCustomWindow(WindowNumber)  return integer
 OpenCustomWindow(WindowNumber) 
 CloseCustomWindow(WindowNumber)
 CloseAllCustomWindow()
+AddMenuIcon(TextIndex,ImageIndex)
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main

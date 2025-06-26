@@ -11,6 +11,10 @@ BridgeFunctionAttach('UpdateMouseEvent','TemplateScript_UpdateMouseEvent')
 BridgeFunctionAttach('UpdateKeyEvent','TemplateScript_UpdateKeyEvent')
 BridgeFunctionAttach('ClientProtocol','TemplateScript_ClientProtocol')
 
+################ UPDATE 41 ++ ###################
+BridgeFunctionAttach('EventTimeMenuClick','TemplateScript_EventTimeMenuClick')
+BridgeFunctionAttach('EventEscMenuClick','TemplateScript_EventEscMenuClick')
+
 
 function TemplateScript_MainLoader()
 	-- ### Bridge information: ###
@@ -76,4 +80,17 @@ end
 function TemplateScript_ClientProtocol(head, packet_name)
 	-- ### Bridge information: ###
 	-- Called after receive some LUA packet.
+end
+
+################ UPDATE 41 ++ ###################
+function TemplateScript_EventTimeMenuClick(index)
+	-- ### Bridge information: ###
+	-- index : Event index clicked
+	-- Called in real time interface key update.
+end
+
+function TemplateScript_EventEscMenuClick(index)
+	-- ### Bridge information: ###
+	-- index : Menu index clicked
+	-- Called in real time interface key update.
 end
