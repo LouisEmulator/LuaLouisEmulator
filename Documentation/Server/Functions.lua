@@ -48,6 +48,9 @@ GetObjectLife(aIndex)
 GetObjectAddLife(aIndex)
 GetObjectMaxLife(aIndex)
 GetObjectTotalLife(aIndex)
+SetObjectLife(aIndex) --UPDATE 41+
+SetObjectAddLife(aIndex) --UPDATE 41+
+SetObjectMaxLife(aIndex) --UPDATE 41+
 GetObjectMana(aIndex)
 GetObjectMaxMana(aIndex)
 GetObjectBP(aIndex)

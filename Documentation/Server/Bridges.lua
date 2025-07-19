@@ -15,6 +15,7 @@ BridgeFunctionAttach('OnCheckUserKiller','TemplateScript_OnCheckUserKiller')
 BridgeFunctionAttach('OnUserItemPick','TemplateScript_OnUserItemPick')
 BridgeFunctionAttach('OnUserItemDrop','TemplateScript_OnUserItemDrop')
 BridgeFunctionAttach('OnUserItemMove','TemplateScript_OnUserItemMove')
+BridgeFunctionAttach('OnUserItemUse','TemplateScript_OnUserItemUse')
 BridgeFunctionAttach('OnUserDamage','TemplateScript_OnUserDamage')
 BridgeFunctionAttach('OnMonsterDamage','TemplateScript_OnMonsterDamage')
 BridgeFunctionAttach('OnSQLAsyncResult','TemplateScript_OnSQLAsyncResult')
@@ -192,6 +193,22 @@ function TemplateScript_OnUserItemMove(aIndex, aFlag, aSlot, bFlag, bSlot, ItemI
 	-- ### Bridge information: ###
 	-- Called on item move, must return (1) if the item can be moved, (0) if not.
 	return 1
+end
+
+function TemplateScript_OnUserItemUse(aIndex, SourceSlot, TargetSlot) --update 41 ++
+	-- ### Argument information: ###
+	-- aIndex			= User index.
+	-- SourceSlot		= Item source flag.
+	-- TargetSlot		= Item source slot.
+
+	-- ### Bridge information: ###
+	-- Called on item use(right click or use item like jewels, custom jewels, etc)
+	-- must return (1) = Modify SourceSlot 
+	-- must return (2) = Delete SourceSlot and update TargetSlot 
+	-- must return (3) = Delete SourceSlot
+	-- must return (4) = Decrease SourceSlot item durability
+	-- must return (5) = No updates or deletes (like return 0)
+	return 0
 end
 
 function TemplateScript_OnUserDamage(aIndex,bIndex,damage,skill,combo,flag)

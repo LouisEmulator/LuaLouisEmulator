@@ -301,6 +301,24 @@ function BridgeFunction_OnUserItemMove(...)
 
 end
 
+function BridgeFunction_OnUserItemUse(...)
+
+	if BridgeFunctionTable["OnUserItemUse"] ~= nil then
+	
+		for _, func in ipairs(BridgeFunctionTable["OnUserItemUse"]) do
+		
+			local ret =_G[func.Function](...)
+			
+			if ret ~= 0 then return ret end
+			
+		end
+		
+	end
+
+	return 0
+
+end
+
 function BridgeFunction_OnUserDamage(...)
 
 	if BridgeFunctionTable["OnUserDamage"] ~= nil then
