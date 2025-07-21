@@ -48,9 +48,6 @@ GetObjectLife(aIndex)
 GetObjectAddLife(aIndex)
 GetObjectMaxLife(aIndex)
 GetObjectTotalLife(aIndex)
-SetObjectLife(aIndex) --UPDATE 41+
-SetObjectAddLife(aIndex) --UPDATE 41+
-SetObjectMaxLife(aIndex) --UPDATE 41+
 GetObjectMana(aIndex)
 GetObjectMaxMana(aIndex)
 GetObjectBP(aIndex)
@@ -187,6 +184,14 @@ AddItemToGremoryCase(aIndex, GremoryType, GremoryNumber, ItemIndex, ItemLevel, I
 GetMonsterTopHitDamageUser(aIndex) return object index
 MuHelperStart(aIndex)
 MuHelperStop(aIndex)
+-- UPDATE 41 + --
+SetObjectLife(aIndex)
+SetObjectAddLife(aIndex)
+SetObjectMaxLife(aIndex)
+SetObjectReset(aIndex)
+AddObjectReset(aIndex)
+SetObjectMasterReset(aIndex)
+AddObjectMasterReset(aIndex)
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main

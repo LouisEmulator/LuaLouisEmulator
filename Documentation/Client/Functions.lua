@@ -238,7 +238,7 @@ DisableShowName() ON/OFF
 Base64ImageToFile(FileName,ImgBase64String) return true/false
 LoadPngImage(ImageIndex,FileName) return true/false
 
-## UPDATE 41++ ##
+--## UPDATE 41++ ##--
 
 ## WINDOW NUMBER ##
 	WindowBuyVip		= 1,
@@ -246,8 +246,8 @@ LoadPngImage(ImageIndex,FileName) return true/false
 	WindowRanking		= 3,
 	WindowCommand		= 4,
 	WindowItemBank		= 5,
-	WindowFlag		= 6,
-	WindowSkin		= 7,
+	WindowFlag			= 6,
+	WindowSkin			= 7,
 	WindowLuckyWheel	= 8,
 	WindowLevelUp		= 9,
 	WindowSmithShop		= 10,
@@ -258,6 +258,7 @@ LoadPngImage(ImageIndex,FileName) return true/false
 	WindowDailyReward	= 15,
 	WindowMarketPlace	= 16,
 	WindowViewDetails	= 17,
+	WindowGremoryCase	= 18,
  ## ## ## ## ## ## ## ## ## ## ## ## ## ##
 
 CheckCustomWindow(WindowNumber)  return integer
