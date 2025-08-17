@@ -110,3 +110,19 @@ function BridgeFunction_ClientProtocol(...)
 		end
 	end
 end
+
+function BridgeFunction_EventTimeMenuClick(...)
+	if BridgeFunctionTable["EventTimeMenuClick"] ~= nil then
+		for _, func in ipairs(BridgeFunctionTable["EventTimeMenuClick"]) do
+			_G[func.Function](...)
+		end
+	end
+end
+
+function BridgeFunction_EventEscMenuClick(...)
+	if BridgeFunctionTable["EventEscMenuClick"] ~= nil then
+		for _, func in ipairs(BridgeFunctionTable["EventEscMenuClick"]) do
+			_G[func.Function](...)
+		end
+	end
+end
