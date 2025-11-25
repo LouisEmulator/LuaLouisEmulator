@@ -185,7 +185,7 @@ GetMonsterTopHitDamageUser(aIndex) return object index
 MuHelperStart(aIndex)
 MuHelperStop(aIndex)
 -- UPDATE 41 + --
-SetObjectLife(aIndex)
+SetObjectLife(aIndex,Value)
 SetObjectAddLife(aIndex,Value)
 SetObjectMaxLife(aIndex,Value)
 SetObjectReset(aIndex,Value)
