@@ -186,12 +186,12 @@ MuHelperStart(aIndex)
 MuHelperStop(aIndex)
 -- UPDATE 41 + --
 SetObjectLife(aIndex)
-SetObjectAddLife(aIndex)
-SetObjectMaxLife(aIndex)
-SetObjectReset(aIndex)
-AddObjectReset(aIndex)
-SetObjectMasterReset(aIndex)
-AddObjectMasterReset(aIndex)
+SetObjectAddLife(aIndex,Value)
+SetObjectMaxLife(aIndex,Value)
+SetObjectReset(aIndex,Value)
+AddObjectReset(aIndex,Value)
+SetObjectMasterReset(aIndex,Value)
+AddObjectMasterReset(aIndex,Value)
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
