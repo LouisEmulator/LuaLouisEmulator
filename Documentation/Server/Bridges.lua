@@ -208,6 +208,7 @@ function TemplateScript_OnUserItemUse(aIndex, SourceSlot, TargetSlot) --update 4
 	-- must return (3) = Delete SourceSlot
 	-- must return (4) = Decrease SourceSlot item durability
 	-- must return (5) = No updates or deletes (like return 0)
+	-- must return (6) = Decrease SourceSlot item durability but if durability = 1 returns to 255 (like infinity potions)
 	return 0
 end
 

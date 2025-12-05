@@ -103,14 +103,22 @@ LuaSetWord(offset, value)
 LuaSetDword(offset, value)
 LuaSetFloat(offset, value)
 LuaSetDouble(offset, value)
+-- Update 42 + --
+GetMonsterName(index) return string
 
 
--- ### ITEM BMD FUNCTIONS ###
+-- ### ITEM FUNCTIONS ###
 GetNameByIndex(ItemIndex) return String
 GetCompleteNameByIndex(ItemIndex,ItemLevel,ItemExcOpt) return String
 GetWidthByIndex(ItemIndex) return int
 GetHeightByIndex(ItemIndex) return int
 GetSlotByIndex(ItemIndex) return int
+-- Update 41 + --
+GetInventoryMouseSlot() return item inventory slot
+GetInventoryMouseItemSlot() return item inventory slot
+GetInventoryMouseItemIndex() return item index
+GetInventoryMouseItemLevel() return item level
+GetInventoryMouseItemExc() return item excellent 
 
 -- ### USER FUNCTIONS ###
 UserGetMap() return integer
@@ -259,6 +267,8 @@ LoadPngImage(ImageIndex,FileName) return true/false
 	WindowMarketPlace	= 16,
 	WindowViewDetails	= 17,
 	WindowGremoryCase	= 18,
+	WindowCustomQuest	= 19, --Update 42+
+	WindowCustomGuild	= 20, --Update 42+
  ## ## ## ## ## ## ## ## ## ## ## ## ## ##
 
 CheckCustomWindow(WindowNumber)  return integer

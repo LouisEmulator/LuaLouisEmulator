@@ -192,6 +192,13 @@ SetObjectReset(aIndex,Value)
 AddObjectReset(aIndex,Value)
 SetObjectMasterReset(aIndex,Value)
 AddObjectMasterReset(aIndex,Value)
+-- UPDATE 42 + --
+SetObjectGuildStatus(aIndex,Status)
+SetObjectGuildNotice(aIndex,Notice)
+ObjectGuildDelMember(aIndex)
+ObjectGuildRequest(aIndex,bIndex)
+ObjectGetUserGuildInfo(aIndex) return TABLE GuildCount,GuildTotalScore,GuildPlayScore,UserNumber,UserConnected,UserStatus
+GetMonsterName(index) return string
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
