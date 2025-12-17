@@ -15,6 +15,9 @@ BridgeFunctionAttach('ClientProtocol','TemplateScript_ClientProtocol')
 BridgeFunctionAttach('EventTimeMenuClick','TemplateScript_EventTimeMenuClick')
 BridgeFunctionAttach('EventEscMenuClick','TemplateScript_EventEscMenuClick')
 
+################ UPDATE 42 ++ ###################
+BridgeFunctionAttach('ObjectRenderName','TemplateScript_ObjectRenderName')
+
 
 function TemplateScript_MainLoader()
 	-- ### Bridge information: ###
@@ -93,4 +96,12 @@ function TemplateScript_EventEscMenuClick(index)
 	-- ### Bridge information: ###
 	-- index : Menu index clicked
 	-- Called in real time interface key update.
+end
+
+function TemplateScript_ObjectRenderName(aIndex,MonsterClass,PosX,PosY)
+	-- ### Bridge information: ###
+	-- aIndex : Object Index
+	-- MonsterClass : monster class
+	-- PosX : Render name position x
+	-- PosY : Render name position y
 end

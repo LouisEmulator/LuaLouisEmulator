@@ -376,3 +376,33 @@ function BridgeFunction_GameServerProtocol(...)
 		
 	end
 end
+
+function BridgeFunction_OnUserLevelUp(...)
+
+	if BridgeFunctionTable["OnUserLevelUp"] ~= nil then
+	
+		for _, func in ipairs(BridgeFunctionTable["OnUserLevelUp"]) do
+		
+			local ret =_G[func.Function](...)
+			
+			return ret
+		end
+	end
+
+	return -1
+end
+
+function BridgeFunction_OnUserMasterLevelUp(...)
+
+	if BridgeFunctionTable["OnUserMasterLevelUp"] ~= nil then
+	
+		for _, func in ipairs(BridgeFunctionTable["OnUserMasterLevelUp"]) do
+		
+			local ret =_G[func.Function](...)
+			
+			return ret
+		end
+	end
+
+	return -1
+end

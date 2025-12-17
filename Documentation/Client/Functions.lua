@@ -106,7 +106,6 @@ LuaSetDouble(offset, value)
 -- Update 42 + --
 GetMonsterName(index) return string
 
-
 -- ### ITEM FUNCTIONS ###
 GetNameByIndex(ItemIndex) return String
 GetCompleteNameByIndex(ItemIndex,ItemLevel,ItemExcOpt) return String
@@ -233,7 +232,7 @@ UnlockPlayerWalk()
 DrawTooltip(int x, int y, char* text)
 SetLockInterfaces()
 SetUnlockInterfaces()
-LuaGetLanguage() return string
+GetLanguage() return string
 PlaySound(int id)
 StopSound(int id)
 GLSwitchBlend()
@@ -269,6 +268,7 @@ LoadPngImage(ImageIndex,FileName) return true/false
 	WindowGremoryCase	= 18,
 	WindowCustomQuest	= 19, --Update 42+
 	WindowCustomGuild	= 20, --Update 42+
+
  ## ## ## ## ## ## ## ## ## ## ## ## ## ##
 
 CheckCustomWindow(WindowNumber)  return integer

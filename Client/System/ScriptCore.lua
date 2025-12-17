@@ -126,3 +126,12 @@ function BridgeFunction_EventEscMenuClick(...)
 		end
 	end
 end
+
+function BridgeFunction_ObjectRenderName(...)
+	if BridgeFunctionTable["ObjectRenderName"] ~= nil then
+		for _, func in ipairs(BridgeFunctionTable["ObjectRenderName"]) do
+			_G[func.Function](...)
+		end
+	end
+end
+

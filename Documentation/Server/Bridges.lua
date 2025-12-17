@@ -20,6 +20,8 @@ BridgeFunctionAttach('OnUserDamage','TemplateScript_OnUserDamage')
 BridgeFunctionAttach('OnMonsterDamage','TemplateScript_OnMonsterDamage')
 BridgeFunctionAttach('OnSQLAsyncResult','TemplateScript_OnSQLAsyncResult')
 BridgeFunctionAttach('GameServerProtocol','TemplateScript_GameServerProtocol')
+BridgeFunctionAttach('OnUserLevelUp','TemplateScript_OnUserLevelUp')
+BridgeFunctionAttach('OnUserMasterLevelUp','TemplateScript_OnUserMasterLevelUp')
 
 function TemplateScript_OnReadScript()
 	-- ### Bridge information: ###
@@ -258,4 +260,26 @@ function TemplateScript_GameServerProtocol(aIndex, head, packet_name)
 
 	-- ### Bridge information: ###
 	-- Called after receive some LUA packet.
+end
+
+function TemplateScript_OnUserLevelUp(aIndex,level)
+	-- ### Argument information: ###
+	-- aIndex = User index.
+	-- level  = User level.
+
+	-- ### Bridge information: ###
+	-- Return character level up points
+	-- return -1 default server level up points
+	-- return >= 0 Change level up points
+end
+
+function TemplateScript_OnUserMasterLevelUp(aIndex,level)
+	-- ### Argument information: ###
+	-- aIndex = User index.
+	-- level  = User master level.
+
+	-- ### Bridge information: ###
+	-- Return character level up points
+	-- return -1 default server level up points
+	-- return >= 0 Change level up points
 end
