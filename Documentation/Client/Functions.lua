@@ -189,6 +189,21 @@ CharacterGetVisible(int arrayIndex) return integer
 SetCharacterAction(int arrayIndex, int animation)
 CharacterGetFullClass(int arrayIndex) return integer
 
+-- ### PACKET FUNCTIONS ###
+CreatePacket(packetName, packet) -> create packet for send main
+SetDwordPacket(packetName, position) -> set value dword
+GetDwordPacket(packetName, position) -> get value dword
+SetWordPacket(packetName, position) -> set value word
+GetWordPacket(packetName, position) -> get value word
+SetBytePacket(packetName, position) -> set value byte
+GetBytePacket(packetName, position) -> get value byte
+SetCharPacket(packetName, string) -> set a string with a maximum of 10 characters
+GetCharPacket(packetName, position) -> get string
+SetCharPacketLength(packetName, string, length) -> set a string the size you set
+GetCharPacketLength(packetName, string, length) -> get a string
+SendPacket(packetName, aIndex) -> send packet for player
+ClearPacket(packetName) -> always when you create a packet you need clear!
+
 -- ### INTERFACE FUNCTIONS ###
 RenderImage(int imageID, float x, float y, float width, float height)
 MousePosX() return integer 
@@ -223,8 +238,8 @@ GetImageHeight(int texture) return float
 ItemByteConvert(BYTE* lpMsg, int ItemIndex, int Level, int dur, int Op1, int Op2, int Op3, int Exc, int Ancient, int JoH, int Socket, BYTE Sock1, BYTE Sock2, BYTE Sock3, BYTE Sock4, BYTE Sock5)
 ShowDescriptionComplete(int x, int y, int ItemIndex, int Level, int dur, int Op1, int Op2, int Op3, int Exc, int Ancient, int JoH, int Socket, int Sock1, int Sock2, int Sock3, int Sock4, int Sock5)
 RenderTooltip(int aValue,int bValue,int cValue,int dValue,int eValue,int fValue,int gValue,int hValue,int iValue,int jValue)
-CreateItem(float sx, float sy, float w, float h, int Type, int Level, int Option1, int ExtOption,int Rotate) return SkinIndex
-LoadMonster(int SkinIndex)
+CreateItem(float sx, float sy, float w, float h, int Type, int Level, int Option1, int ExtOption,int Rotate)
+LoadMonster(int SkinIndex) return SkinIndex
 RenderMonster(int aIndex, float PosX, float PosY, float size)
 SendMessageClient(char* text)
 LockPlayerWalk()
@@ -277,17 +292,5 @@ CloseCustomWindow(WindowNumber)
 CloseAllCustomWindow()
 AddMenuIcon(TextIndex,ImageIndex)
 
--- ### PACKET FUNCTIONS ###
-CreatePacket(packetName, packet) -> create packet for send main
-SetDwordPacket(packetName, position) -> set value dword
-GetDwordPacket(packetName, position) -> get value dword
-SetWordPacket(packetName, position) -> set value word
-GetWordPacket(packetName, position) -> get value word
-SetBytePacket(packetName, position) -> set value byte
-GetBytePacket(packetName, position) -> get value byte
-SetCharPacket(packetName, string) -> set a string with a maximum of 10 characters
-GetCharPacket(packetName, position) -> get string
-SetCharPacketLength(packetName, string, length) -> set a string the size you set
-GetCharPacketLength(packetName, string, length) -> get a string
-SendPacket(packetName, aIndex) -> send packet for player
-ClearPacket(packetName) -> always when you create a packet you need clear!
+--## UPDATE 42++ ##--
+CreateItemSize(float sx, float sy, float w, float h, int Type, int Level, int Option1, int ExtOption,int Rotate, float Size) 
