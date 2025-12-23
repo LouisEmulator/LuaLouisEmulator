@@ -140,6 +140,9 @@ UserGetClass() return integer
 UserGetGuild() return integer
 GuildGetName() return string
 
+-- Update 42 + --
+UserCreatePath(TargetX,TargetY)
+
 -- ### CHARACTER FUNCTIONS ###
 CharacterGetName(int arrayIndex) return string
 CharacterGetIndex(int arrayIndex) return integer
