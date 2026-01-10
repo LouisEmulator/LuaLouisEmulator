@@ -199,6 +199,12 @@ ObjectGuildDelMember(aIndex)
 ObjectGuildRequest(aIndex,bIndex)
 ObjectGetUserGuildInfo(aIndex) return TABLE GuildCount,GuildTotalScore,GuildPlayScore,UserNumber,UserConnected,UserStatus
 GetMonsterName(index) return string
+-- UPDATE 43 + --
+GetObjectAddShield(aIndex)
+GetObjectTotalShield(aIndex)
+SetObjectShield(aIndex,Value)
+SetObjectAddShield(aIndex,Value)
+SetObjectMaxShield(aIndex,Value)
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
