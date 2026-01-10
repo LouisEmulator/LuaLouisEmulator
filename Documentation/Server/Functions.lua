@@ -206,6 +206,18 @@ SetObjectShield(aIndex,Value)
 SetObjectAddShield(aIndex,Value)
 SetObjectMaxShield(aIndex,Value)
 
+GetObjectAddMana(aIndex)
+GetObjectTotalMana(aIndex)
+SetObjectMana(aIndex,Value)
+SetObjectAddMana(aIndex,Value)
+SetObjectMaxMana(aIndex,Value)
+
+GetObjectAddBP(aIndex)
+GetObjectTotalBP(aIndex)
+SetObjectBP(aIndex,Value)
+SetObjectAddBP(aIndex,Value)
+SetObjectMaxBP(aIndex,Value)
+
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
 SetDwordPacket(packetName, position) -> set value dword
