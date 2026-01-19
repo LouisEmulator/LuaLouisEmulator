@@ -243,7 +243,7 @@ ShowDescriptionComplete(int x, int y, int ItemIndex, int Level, int dur, int Op1
 RenderTooltip(int aValue,int bValue,int cValue,int dValue,int eValue,int fValue,int gValue,int hValue,int iValue,int jValue)
 CreateItem(float sx, float sy, float w, float h, int Type, int Level, int Option1, int ExtOption,int Rotate)
 LoadMonster(int SkinIndex) return SkinIndex
-RenderMonster(int aIndex, float PosX, float PosY, float size)
+RenderMonster(int aIndex, float PosX, float PosY, float size) 
 SendMessageClient(char* text)
 LockPlayerWalk()
 UnlockPlayerWalk()
@@ -297,3 +297,6 @@ AddMenuIcon(TextIndex,ImageIndex)
 
 --## UPDATE 42++ ##--
 CreateItemSize(float sx, float sy, float w, float h, int Type, int Level, int Option1, int ExtOption,int Rotate, float Size) 
+
+--## UPDATE 43++ ##--
+RenderMonsterRotation(int aIndex, float PosX, float PosY, float size) 
