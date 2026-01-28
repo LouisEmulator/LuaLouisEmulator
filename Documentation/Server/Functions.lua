@@ -218,6 +218,8 @@ SetObjectBP(aIndex,Value)
 SetObjectAddBP(aIndex,Value)
 SetObjectMaxBP(aIndex,Value)
 
+GetEffectTable(aIndex,effectnumber) return Count,Value1,Value2,Value3,Value4
+
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
 SetDwordPacket(packetName, position) -> set value dword
