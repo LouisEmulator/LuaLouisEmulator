@@ -220,6 +220,10 @@ SetObjectMaxBP(aIndex,Value)
 
 GetEffectTable(aIndex,effectnumber) return Count,Value1,Value2,Value3,Value4
 
+InventoryDecreaseItemDurability(aIndex,Slot,Durability) Descrease item Durability and check if is a stack item descrease the amount, if final durabilty < 0 auto delete item
+CheckMaxStackItem(ItemIndex) return maxstack from itemstack.txt (to check if is a stack item)
+
+
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
 SetDwordPacket(packetName, position) -> set value dword
