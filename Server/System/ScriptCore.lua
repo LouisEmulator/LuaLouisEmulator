@@ -406,3 +406,31 @@ function BridgeFunction_OnUserMasterLevelUp(...)
 
 	return -1
 end
+
+function BridgeFunction_OnOpenWarehouse(...)
+
+	if BridgeFunctionTable["OnOpenWarehouse"] ~= nil then
+	
+		for _, func in ipairs(BridgeFunctionTable["OnOpenWarehouse"]) do
+		
+			_G[func.Function](...)
+			
+		end
+		
+	end
+
+end
+
+function BridgeFunction_OnCloseWarehouse(...)
+
+	if BridgeFunctionTable["OnCloseWarehouse"] ~= nil then
+	
+		for _, func in ipairs(BridgeFunctionTable["OnCloseWarehouse"]) do
+		
+			_G[func.Function](...)
+			
+		end
+		
+	end
+
+end

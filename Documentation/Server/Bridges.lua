@@ -22,6 +22,8 @@ BridgeFunctionAttach('OnSQLAsyncResult','TemplateScript_OnSQLAsyncResult')
 BridgeFunctionAttach('GameServerProtocol','TemplateScript_GameServerProtocol')
 BridgeFunctionAttach('OnUserLevelUp','TemplateScript_OnUserLevelUp')
 BridgeFunctionAttach('OnUserMasterLevelUp','TemplateScript_OnUserMasterLevelUp')
+BridgeFunctionAttach('OnOpenWarehouse','TemplateScript_OnOpenWarehouse')
+BridgeFunctionAttach('OnCloseWarehouse','TemplateScript_OnCloseWarehouse')
 
 function TemplateScript_OnReadScript()
 	-- ### Bridge information: ###
@@ -282,4 +284,21 @@ function TemplateScript_OnUserMasterLevelUp(aIndex,level)
 	-- Return character level up points
 	-- return -1 default server level up points
 	-- return >= 0 Change level up points
+end
+
+function TemplateScript_OnOpenWarehouse(aIndex, warenumber)
+	-- ### Argument information: ###
+	-- aIndex = User index.
+	-- warenumber = Warehouse use number.
+
+	-- ### Bridge information: ###
+	-- Called after a user execute valid command.
+end
+
+function TemplateScript_OnCloseWarehouse(aIndex)
+	-- ### Argument information: ###
+	-- aIndex = User index.
+
+	-- ### Bridge information: ###
+	-- Called after a user execute valid command.
 end

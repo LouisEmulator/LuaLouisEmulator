@@ -139,9 +139,11 @@ UserGetMasterLevel() return integer
 UserGetClass() return integer
 UserGetGuild() return integer
 GuildGetName() return string
-
 -- Update 42 + --
 UserCreatePath(TargetX,TargetY)
+-- Update 43 + --
+UserPositionFromAngleX() return integer
+UserPositionFromAngleY() return integer
 
 -- ### CHARACTER FUNCTIONS ###
 CharacterGetName(int arrayIndex) return string
@@ -191,6 +193,10 @@ CharacterGetGuildStatus(int arrayIndex) return integer
 CharacterGetVisible(int arrayIndex) return integer
 SetCharacterAction(int arrayIndex, int animation)
 CharacterGetFullClass(int arrayIndex) return integer
+-- Update 43 + --
+CharacterPositionFromAngleX(int index) return integer
+CharacterPositionFromAngleY(int index) return integer
+
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
