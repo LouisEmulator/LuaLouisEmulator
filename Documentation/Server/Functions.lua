@@ -260,6 +260,7 @@ GetObjectTripleDamage(aIndex)
 GetObjectResistTripleDamage(aIndex)
 GetObjectPhysiSpeed(aIndex)
 GetObjectMagicSpeed(aIndex)
+GetObjectExperience(aIndex)
 
 SetObjectDamageReduction(aIndex,Type,Value) //DAMAGE_REDUCTION_EXCELLENT_ITEM = 0, //DAMAGE_REDUCTION_SET_ITEM = 1, //DAMAGE_REDUCTION_JOH_ITEM = 2, //DAMAGE_REDUCTION_380_ITEM = 3, //DAMAGE_REDUCTION_MASTER_SKILL_TREE = 4, //DAMAGE_REDUCTION_SOCKET_ITEM = 5,
 SetObjectShieldDamageReduction(aIndex,Value)
@@ -298,6 +299,7 @@ SetObjectTripleDamage(aIndex,Value)
 SetObjectResistTripleDamage(aIndex,Value)
 SetObjectPhysiSpeed(aIndex,Value)
 SetObjectMagicSpeed(aIndex,Value)
+SetObjectExperience(aIndex,Value)
 
 GetGameServerUpdate()	return GAMESERVER_CLIENT_UPDATE
 
