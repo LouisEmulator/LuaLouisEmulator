@@ -299,7 +299,7 @@ SetObjectResistTripleDamage(aIndex,Value)
 SetObjectPhysiSpeed(aIndex,Value)
 SetObjectMagicSpeed(aIndex,Value)
 
-GetGameServerVersion()	return GAMESERVER_CLIENT_UPDATE
+GetGameServerUpdate()	return GAMESERVER_CLIENT_UPDATE
 
 
 -- ### PACKET FUNCTIONS ###
