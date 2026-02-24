@@ -306,3 +306,6 @@ CreateItemSize(float sx, float sy, float w, float h, int Type, int Level, int Op
 
 --## UPDATE 43++ ##--
 RenderMonsterRotation(int aIndex, float PosX, float PosY, float size) 
+
+GetOpenGLWidth() return integer 
+GetOpenGLHeight() return integer 
