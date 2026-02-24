@@ -319,6 +319,9 @@ GetCharPacketLength(packetName, string, length) -> get a string
 SendPacket(packetName, aIndex) -> send packet for player
 ClearPacket(packetName) -> always when you create a packet you need clear!
 
+-- UPDATE 43 + --
+SetHexPacketLength(packetName, string, length) -> set a string the size you set (Allows you to send the string in its exact length, even if it contains 0 (null), ideal for Hex strings.)
+GetHexPacketLength(packetName, string, length) -> get a string (Allows you to get the string in its exact length, even if it contains 0 (null), ideal for Hex strings.)
 
 -- ### SQL FUNCTIONS ###
 

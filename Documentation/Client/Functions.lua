@@ -213,6 +213,10 @@ GetCharPacketLength(packetName, string, length) -> get a string
 SendPacket(packetName, aIndex) -> send packet for player
 ClearPacket(packetName) -> always when you create a packet you need clear!
 
+-- UPDATE 43 + --
+SetHexPacketLength(packetName, string, length) -> set a string the size you set (Allows you to send the string in its exact length, even if it contains 0 (null), ideal for Hex strings.)
+GetHexPacketLength(packetName, string, length) -> get a string (Allows you to get the string in its exact length, even if it contains 0 (null), ideal for Hex strings.)
+
 -- ### INTERFACE FUNCTIONS ###
 RenderImage(int imageID, float x, float y, float width, float height)
 MousePosX() return integer 
@@ -307,5 +311,7 @@ CreateItemSize(float sx, float sy, float w, float h, int Type, int Level, int Op
 --## UPDATE 43++ ##--
 RenderMonsterRotation(int aIndex, float PosX, float PosY, float size) 
 
-GetOpenGLWidth() return integer 
-GetOpenGLHeight() return integer 
+GetOpenGLWidth() return integer
+GetOpenGLHeight() return integer
+
+CreateGuildMark(ImageIndex,MarkHex) ImageIndex: 61920 - 61929 (10 slots) 
