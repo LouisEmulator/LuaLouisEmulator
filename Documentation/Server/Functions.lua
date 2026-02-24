@@ -303,6 +303,8 @@ SetObjectExperience(aIndex,Value)
 
 GetGameServerUpdate()	return GAMESERVER_CLIENT_UPDATE
 
+GetObjectGuildMark(aIndex) return Hex string
+
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
