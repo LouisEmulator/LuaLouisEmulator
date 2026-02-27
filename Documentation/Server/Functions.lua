@@ -305,6 +305,7 @@ GetGameServerUpdate()	return GAMESERVER_CLIENT_UPDATE
 
 GetObjectGuildMark(aIndex) return Hex string
 
+CastleSiegeAddGuildPoint(aIndex,Value) Only for CastleSiegePointSwitch = 1 during the event
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
