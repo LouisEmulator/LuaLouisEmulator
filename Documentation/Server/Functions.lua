@@ -311,6 +311,9 @@ PartyCreate(aIndex) return 0 or 1
 PartyDelete(PartyIndex) return 0 or 1
 MoneyDrop(aValue,MapNumber,MapX,MapY)
 
+GetObjectMoneyAmountDropRate(aIndex) 
+SetObjectMoneyAmountDropRate(aIndex,Value)
+
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
 SetDwordPacket(packetName, position) -> set value dword
