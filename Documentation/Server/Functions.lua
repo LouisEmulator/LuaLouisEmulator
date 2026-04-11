@@ -307,6 +307,10 @@ GetObjectGuildMark(aIndex) return Hex string
 
 CastleSiegeAddGuildPoint(aIndex,Value) Only for CastleSiegePointSwitch = 1 during the event
 
+PartyCreate(aIndex) return 0 or 1
+PartyDelete(PartyIndex) return 0 or 1
+MoneyDrop(aValue,MapNumber,MapX,MapY)
+
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
 SetDwordPacket(packetName, position) -> set value dword
