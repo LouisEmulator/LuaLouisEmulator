@@ -314,6 +314,9 @@ MoneyDrop(aValue,MapNumber,MapX,MapY)
 GetObjectMoneyAmountDropRate(aIndex) 
 SetObjectMoneyAmountDropRate(aIndex,Value)
 
+-- UPDATE 44+ --
+KillObject(aIndex) 
+
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
 SetDwordPacket(packetName, position) -> set value dword
