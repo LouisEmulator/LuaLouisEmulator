@@ -315,3 +315,6 @@ GetOpenGLWidth() return integer
 GetOpenGLHeight() return integer
 
 CreateGuildMark(ImageIndex,MarkHex) ImageIndex: 61920 - 61929 (10 slots) 
+
+--## UPDATE 44++ ##--
+GetHardwareId()   return string
