@@ -141,20 +141,11 @@ function TemplateScript_OnCheckUserKiller(aIndex, bIndex)
 	return 1
 end
 
-function TemplateScript_OnUserItemPick(aIndex, slot, map, x, y, ItemIndex, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption)
+function TemplateScript_OnUserItemPick(aIndex, slot, map, x, y, ItemIndex, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption, ItemSetOption)
 	-- ### Argument information: ###
 	-- aIndex = User index.
-	-- index = Item slot.
-
-	-- ### Bridge information: ###
-	-- Called on item pick, must return (1) if the item can be picked, (0) if not.
-	return 1
-end
-
-function TemplateScript_OnUserItemDrop(aIndex, slot, map, x, y, ItemIndex, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption)
-	-- ### Argument information: ###
-	-- aIndex = User index.
-	-- index = Item slot.
+	-- slot = Item slot.
+	-- map = map number
 	-- x = Item drop position x.
 	-- y = Item drop position y.
 	-- ItemIndex	= Item index.
@@ -163,6 +154,27 @@ function TemplateScript_OnUserItemDrop(aIndex, slot, map, x, y, ItemIndex, ItemL
 	-- ItemOption2	= Item lucky.
 	-- ItemOption3	= Item life option.
 	-- ItemNewOption= Item Excellent.
+	-- ItemSetOption= Item Ancient.
+
+	-- ### Bridge information: ###
+	-- Called on item pick, must return (1) if the item can be picked, (0) if not.
+	return 1
+end
+
+function TemplateScript_OnUserItemDrop(aIndex, slot, map, x, y, ItemIndex, ItemLevel, ItemOption1, ItemOption2, ItemOption3, ItemNewOption, ItemSetOption)
+	-- ### Argument information: ###
+	-- aIndex = User index.
+	-- slot = Item slot.
+	-- map = map number
+	-- x = Item drop position x.
+	-- y = Item drop position y.
+	-- ItemIndex	= Item index.
+	-- ItemLevel	= Item level.
+	-- ItemOption1	= Item skill.
+	-- ItemOption2	= Item lucky.
+	-- ItemOption3	= Item life option.
+	-- ItemNewOption= Item Excellent.
+	-- ItemSetOption= Item Ancient.
 
 	-- ### Bridge information: ###
 	-- Called on item drop, must return (1) if the item can be dropped, (0) if not.
