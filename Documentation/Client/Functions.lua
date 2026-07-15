@@ -217,6 +217,11 @@ ClearPacket(packetName) -> always when you create a packet you need clear!
 SetHexPacketLength(packetName, string, length) -> set a string the size you set (Allows you to send the string in its exact length, even if it contains 0 (null), ideal for Hex strings.)
 GetHexPacketLength(packetName, string, length) -> get a string (Allows you to get the string in its exact length, even if it contains 0 (null), ideal for Hex strings.)
 
+--## UPDATE 44++ ##--
+GetHardwareId()   return string
+
+-------------------------------------------------------------------------------------
+
 -- ### INTERFACE FUNCTIONS ###
 RenderImage(int imageID, float x, float y, float width, float height)
 MousePosX() return integer 
@@ -317,4 +322,4 @@ GetOpenGLHeight() return integer
 CreateGuildMark(ImageIndex,MarkHex) ImageIndex: 61920 - 61929 (10 slots) 
 
 --## UPDATE 44++ ##--
-GetHardwareId()   return string
+OpenUrl(Url)
