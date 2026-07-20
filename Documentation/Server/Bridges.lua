@@ -314,3 +314,18 @@ function TemplateScript_OnCloseWarehouse(aIndex)
 	-- ### Bridge information: ###
 	-- Called after a user execute valid command.
 end
+
+function TemplateScript_OnMonsterDieGiveItem(aIndex, bIndex, MapNumber, PosX, PosY, ItemIndex, Money)
+	-- ### Argument information: ###
+	-- aIndex = User index.
+	-- bIndex = Monster index.
+	-- map = map number
+	-- x = Item drop position x.
+	-- y = Item drop position y.
+	-- Item Index	= Item index or -1.
+	-- Money Value	= Item index or -1.
+
+	-- ### Bridge information: ###
+	-- Called after a user talks with a NPC, must return (1) if the talk is successful, (0) if not.
+	return 0
+end

@@ -434,3 +434,22 @@ function BridgeFunction_OnCloseWarehouse(...)
 	end
 
 end
+
+--UPDATE 44++
+function BridgeFunction_OnMonsterDieGiveItem(...)
+
+	if BridgeFunctionTable["OnMonsterDieGiveItem"] ~= nil then
+	
+		for _, func in ipairs(BridgeFunctionTable["OnMonsterDieGiveItem"]) do
+		
+			local ret =_G[func.Function](...)
+			
+			if ret ~= 0 then return 1 end
+			
+		end
+		
+	end
+
+	return 0
+
+end
