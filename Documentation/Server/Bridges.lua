@@ -24,6 +24,7 @@ BridgeFunctionAttach('OnUserLevelUp','TemplateScript_OnUserLevelUp')
 BridgeFunctionAttach('OnUserMasterLevelUp','TemplateScript_OnUserMasterLevelUp')
 BridgeFunctionAttach('OnOpenWarehouse','TemplateScript_OnOpenWarehouse')
 BridgeFunctionAttach('OnCloseWarehouse','TemplateScript_OnCloseWarehouse')
+BridgeFunctionAttach('OnMonsterDieGiveItem','TemplateScript_OnMonsterDieGiveItem')
 
 function TemplateScript_OnReadScript()
 	-- ### Bridge information: ###

@@ -317,6 +317,12 @@ SetObjectMoneyAmountDropRate(aIndex,Value)
 -- UPDATE 44+ --
 KillObject(aIndex) 
 
+-- UPDATE 45+ --
+GetObjectPetDecDamage(aIndex)
+SetObjectPetDecDamage(aIndex,Value) 
+GetObjectPetIncDamage(aIndex)
+SetObjectPetIncDamage(aIndex,Value) 
+
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
 SetDwordPacket(packetName, position) -> set value dword
