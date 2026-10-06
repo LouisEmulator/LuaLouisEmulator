@@ -323,6 +323,12 @@ SetObjectPetDecDamage(aIndex,Value)
 GetObjectPetIncDamage(aIndex)
 SetObjectPetIncDamage(aIndex,Value) 
 
+InvasionSetRemainTime(InvasionIndex,Value)
+InvasionGetRemainTime(InvasionIndex) return RemainTime
+InvasionGetState(InvasionIndex) return state
+InvasionGetMonsterTable(InvasionIndex) return monster table list (MAX 500)
+
+
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
 SetDwordPacket(packetName, position) -> set value dword
