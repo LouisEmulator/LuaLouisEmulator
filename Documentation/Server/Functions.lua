@@ -328,6 +328,20 @@ InvasionGetRemainTime(InvasionIndex) return RemainTime
 InvasionGetState(InvasionIndex) return state
 InvasionGetMonsterTable(InvasionIndex) return monster table list (MAX 500)
 
+GetObjectDefensePvP(aIndex)
+
+GetObjectDefenseSuccessRate(aIndex)
+SetObjectDefenseSuccessRate(aIndex,Value) 
+GetObjectDefenseSuccessRatePvP(aIndex)
+SetObjectDefenseSuccessRatePvP(aIndex,Value)
+GetObjectAttackSuccessRate(aIndex)
+SetObjectAttackSuccessRate(aIndex,Value)
+GetObjectAttackSuccessRatePvP(aIndex)
+SetObjectAttackSuccessRatePvP(aIndex,Value)
+
+GetObjectHealValue(aIndex)
+GetObjectShieldRecoveryValue(aIndex)
+
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
