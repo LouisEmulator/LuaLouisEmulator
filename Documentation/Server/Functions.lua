@@ -342,6 +342,8 @@ SetObjectAttackSuccessRatePvP(aIndex,Value)
 GetObjectHealValue(aIndex)
 GetObjectShieldRecoveryValue(aIndex)
 
+GetEventCoin(aIndex)
+SetEventCoin(aIndex,Value)
 
 -- ### PACKET FUNCTIONS ###
 CreatePacket(packetName, packet) -> create packet for send main
